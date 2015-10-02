@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jgzs.lsw"
+    android:versionCode="1"
+    android:versionName="1.0" 
+    android:installLocation="auto">
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" 
+        >
+        <activity
+            android:label="@string/app_name"
+            android:name="com.su.activity.MissPreferentialActivity" 
+            android:screenOrientation="portrait" 
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.su.ui.TabShow"
+             android:screenOrientation="portrait"></activity>
+        <activity android:name="com.su.activity.HomeActivity"/>
+        <activity android:name="com.su.activity.NearByAcitivity"/>
+        <activity android:name="com.su.activity.SortActivity"/>
+        <activity android:name="com.su.activity.MoreActivity"/>
+        <activity android:name="com.su.smenu.ChooseCity"/>
+        <activity android:name="com.su.smenu.TwoDimensionalCode"/>
+        <activity android:name="com.su.activity.PlantDetailActivity"/>
+        <activity android:name="com.su.smenu.ChooseMer"/>
+        <activity android:name="com.su.activity.PlantListActivity"/>
+        
+        
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+</manifest>
