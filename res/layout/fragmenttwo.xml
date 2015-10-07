@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000" >
+
+      <ImageView
+          android:id="@+id/fragementImage"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity = "center|center"
+          android:layout_marginLeft ="10dp"
+          android:layout_marginRight ="10dp"
+          android:src="@drawable/test1" />
+
+      <TextView
+          android:id="@+id/fragementText"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:text="1/5"
+          android:textColor="#ffffff"
+          android:textSize="20sp" />
+
+      <TextView
+          android:id="@+id/textView1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/fragementImage"
+          android:layout_below="@id/fragementImage"
+          android:text="sjflksajflksajfjasdlkfjaslkdjflsakdjflksdajfkasdljfl数据库连接上多了空间里发生的纠纷时缴费顺路快递副教授了快速飞多久了开始打架了快速的叫了声福建路口发生角度来看" />
+
+</RelativeLayout>

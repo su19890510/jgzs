@@ -79,7 +79,7 @@ public final class HttpUtils {
 	private static String HttpGet(String url) {
 		DefaultHttpClient mHttpClient = getHttpClient();
 		HttpGet httpGet = new HttpGet(url);
-		
+		Log.v("suzhaohui",url);
 		try {
 			HttpResponse httpResponse = mHttpClient.execute(httpGet);
 			HttpEntity httpEntity = httpResponse.getEntity();
@@ -87,17 +87,18 @@ public final class HttpUtils {
 				int status = httpResponse.getStatusLine().getStatusCode();
 				if (status == HttpStatus.SC_OK) {
 					String response = EntityUtils.toString(httpEntity, "UTF-8");
+					Log.v("suzhaohui",response);
 					return response;
 				}
 			}
 		} 
 		catch (SocketTimeoutException e) {
 		    e.printStackTrace();
-		    return null;
+		    return "{error:timeOut}";
         } 
 		catch (HttpHostConnectException e) {
 		    e.printStackTrace();
-		    return null;
+		    return "{error:netError}";
         }
         catch (ClientProtocolException e)
         {
@@ -117,7 +118,7 @@ public final class HttpUtils {
 	}
 
 	/**
-	 * HttpPost请求，需要构造post参数 post参数例子�? Add data to your post List<NameValuePair>
+	 * HttpPost请求，需要构造post参数 post参数例子�? Add data to your post List<NameValuePair>
 	 * pairs = new ArrayList<NameValuePair>(2); pairs.add(new
 	 * BasicNameValuePair("ID", "VALUE")); pairs.add(new
 	 * BasicNameValuePair("string", "Yeah!"));
@@ -133,6 +134,10 @@ public final class HttpUtils {
 		String response = null;
 		try {
 		    if(pairs!=null){
+		    	  for (NameValuePair pair : pairs)
+		          {
+		             Log.v("suzhaohui",pair.getValue());
+		          }
 		        httpPost.setEntity(new UrlEncodedFormEntity(pairs, "UTF-8"));
 		    }
 			HttpResponse httpResponse = mHttpClient.execute(httpPost);
@@ -147,9 +152,11 @@ public final class HttpUtils {
 		} 
 		catch (SocketTimeoutException e) {
 		    e.printStackTrace();
+		    return "{error:timeOut}";
 		} 
 		catch (HttpHostConnectException e) {
             e.printStackTrace();
+            return "{error:netError}";
         }
 		catch (ClientProtocolException e){
             e.printStackTrace();
@@ -192,43 +199,43 @@ public final class HttpUtils {
 	}
 
 	public static String getConnectionInfo(Context context) {
-		// 获取网络连接管理�?
+		// 获取网络连接管理�?
 		ConnectivityManager connectionManager = (ConnectivityManager) context
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
-		// 获取网络的状态信息，有下面三种方�?
+		// 获取网络的状态信息，有下面三种方�?
 		NetworkInfo networkInfo = connectionManager.getActiveNetworkInfo();
 		return null;
-		// NetworkInfo 有一下方�?
-		// getDetailedState()：获取详细状态�??
-		// getExtraInfo()：获取附加信息�??
-		// getReason()：获取连接失败的原因�?
-		// getType()：获取网络类�?(�?般为移动或Wi-Fi)�?
-		// getTypeName()：获取网络类型名�?(�?般取值�?�WIFI”或“MOBILE�?)�?
-		// isAvailable()：判断该网络是否可用�?
-		// isConnected()：判断是否已经连接�??
-		// isConnectedOrConnecting()：判断是否已经连接或正在连接�?
-		// isFailover()：判断是否连接失败�??
-		// isRoaming()：判断是否漫�?
+		// NetworkInfo 有一下方�?
+		// getDetailedState()：获取详细状态�??
+		// getExtraInfo()：获取附加信息�??
+		// getReason()：获取连接失败的原因�?
+		// getType()：获取网络类�?(�?般为移动或Wi-Fi)�?
+		// getTypeName()：获取网络类型名�?(�?般取值�?�WIFI”或“MOBILE�?)�?
+		// isAvailable()：判断该网络是否可用�?
+		// isConnected()：判断是否已经连接�??
+		// isConnectedOrConnecting()：判断是否已经连接或正在连接�?
+		// isFailover()：判断是否连接失败�??
+		// isRoaming()：判断是否漫�?
 		//
-		// 当用wifi上的时�??
-		// getType �? WIFI
-		// getExtraInfo是空�?
-		// 当用手机上的时�??
+		// 当用wifi上的时�??
+		// getType �? WIFI
+		// getExtraInfo是空�?
+		// 当用手机上的时�??
 		// getType 是MOBILE
 		//
 		// 用移动CMNET方式
-		// getExtraInfo 的�?�是cmnet
+		// getExtraInfo 的�?�是cmnet
 		// 用移动CMWAP方式
-		// getExtraInfo 的�?�是cmwap 但是不在代理的情况下访问普�?�的网站访问不了
+		// getExtraInfo 的�?�是cmwap 但是不在代理的情况下访问普�?�的网站访问不了
 		//
-		// 用联�?3gwap方式
-		// getExtraInfo 的�?�是3gwap
-		// 用联�?3gnet方式
-		// getExtraInfo 的�?�是3gnet
+		// 用联�?3gwap方式
+		// getExtraInfo 的�?�是3gwap
+		// 用联�?3gnet方式
+		// getExtraInfo 的�?�是3gnet
 		// 用联通uniwap方式
-		// getExtraInfo 的�?�是uniwap
+		// getExtraInfo 的�?�是uniwap
 		// 用联通uninet方式
-		// getExtraInfo 的�?�是uninet
+		// getExtraInfo 的�?�是uninet
 	}
 
 	// class UTF8PostMethod extends PostMethod{

@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.jgzs.lsw.R;
 import com.su.activity.PlantListActivity;
+import com.su.activity.ProjectActivity;
 
 import com.su.util.NianUtil;
 import com.su.util.log;
@@ -33,7 +34,7 @@ public class TabShow extends TabActivity {
 	private TabHost mHost;
 	private RadioGroup tabItems;
 	
-	// MineTab ÊÇ ¡°ÎÒµÄ¡± ÕâÒ»Ñ¡Ïî µÄÏÔÊ¾
+	// MineTab ï¿½ï¿½ ï¿½ï¿½ï¿½ÒµÄ¡ï¿½ ï¿½ï¿½Ò»Ñ¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ê¾
 	private MineTab mineTab;
 	private PopupWindow minePop;
 	private RadioButton mineBut;
@@ -55,7 +56,7 @@ public class TabShow extends TabActivity {
 		    		.setContent(new Intent(this , PlantListActivity.class)));
 		    
 		  mHost.addTab(mHost.newTabSpec("NEAR").setIndicator("NEAR")
-		    		.setContent(new Intent(this , PlantListActivity.class)));
+		    		.setContent(new Intent(this , ProjectActivity.class)));
 		    
 		  mHost.addTab(mHost.newTabSpec("SORT").setIndicator("SORT")
 		    		.setContent(new Intent(this , PlantListActivity.class)));  
@@ -88,29 +89,30 @@ public class TabShow extends TabActivity {
 						 break;
 					 case R.id.tab_item_sort :
 						 mHost.setCurrentTabByTag("SORT");
-						 break;			
-					 case R.id.tab_item_more :
+						 break;	
+					 case R.id.tab_item_mine :
 						 mHost.setCurrentTabByTag("MORE");
-						 break;
+						 break;	
+			
 					
 					}
 					
-					mineTab.dismissMine(true);
+//					mineTab.dismissMine(true);
 				}
 			});
 		 
-		 mineBut.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				log.d(TAG,"mineButOnclick  " + minePop);
-				if (minePop == null){
-				  mineTab.showMine();
-				}else {
-				  mineTab.dismissMine(false);
-				}
-			}
-		});
+//		 mineBut.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				log.d(TAG,"mineButOnclick  " + minePop);
+//				if (minePop == null){
+//				  mineTab.showMine();
+//				}else {
+//				  mineTab.dismissMine(false);
+//				}
+//			}
+//		});
 	 }
 	 
 	 /**
@@ -141,14 +143,12 @@ public class TabShow extends TabActivity {
 				 return R.id.tab_item_nearby;
 			 }else if (tag.equals("SORT")){
 				 return R.id.tab_item_sort ;
-			 }else if (tag.equals("MORE")){
-				 return R.id.tab_item_more ;
 			 }else{
 				 return -1;
 			 }
 		 }
 		 /**
-		  * ÏÔÊ¾ popWindow
+		  * ï¿½ï¿½Ê¾ popWindow
 		  */
 		 public void showMine(){
 			// if(!minePop.isShowing()){
@@ -161,7 +161,7 @@ public class TabShow extends TabActivity {
 			 minePop.showAtLocation(patentView, Gravity.BOTTOM | Gravity.LEFT, x, y);
 			
 			 //minePop.showAsDropDown(patentView, x, y);
-			 // ÒÔÏÂ´úÂëÊÇ popwindow¿ÉÒÔ×Ô¶¯ÏûÊ§µÄ ´úÂë
+			 // ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½ popwindowï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½Ê§ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //			 minePop.setBackgroundDrawable(new BitmapDrawable());
 //			 minePop.setOutsideTouchable(true);
 //			 minePop.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -181,8 +181,8 @@ public class TabShow extends TabActivity {
 		 } 
 		 
 		 /**
-		  *  ÏûÊ§¶Ô»°¿ò
-		  * @param isRa ÅĞ¶ÏÊÇ·ñÊÇµã»÷µÄ radioButton Èç¹ûÊÇ ²»ĞèÒª×Ô¼ºÈ¥ÇĞ»»
+		  *  ï¿½ï¿½Ê§ï¿½Ô»ï¿½ï¿½ï¿½
+		  * @param isRa ï¿½Ğ¶ï¿½ï¿½Ç·ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ radioButton ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Òªï¿½Ô¼ï¿½È¥ï¿½Ğ»ï¿½
 		  */
 		 public void dismissMine(boolean isRa){
 			 if(minePop!=null && minePop.isShowing())
@@ -200,7 +200,7 @@ public class TabShow extends TabActivity {
 
 
      /**
-      *  ÍË³öÏûÊ§
+      *  ï¿½Ë³ï¿½ï¿½ï¿½Ê§
       */
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
@@ -210,7 +210,7 @@ public class TabShow extends TabActivity {
 				 if(minePop!=null && minePop.isShowing()){
 					 mineTab.dismissMine(false);
 				 }else if (!FINISH){
-					 backToast = Toast.makeText(this, "ÔÙ°´Ò»´ÎÍË³ö³ÌĞò", Toast.LENGTH_SHORT);
+					 backToast = Toast.makeText(this, "å†æŒ‰ä¸€æ¬¡é€€å‡ºç¨‹åº", Toast.LENGTH_SHORT);
 					 backToast.show();
 					 FINISH = true;
 					 new Timer().schedule(new TimerTask() {

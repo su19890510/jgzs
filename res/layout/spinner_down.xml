@@ -9,18 +9,23 @@
          android:layout_marginRight="5dip">
     <Spinner android:id="@+id/nearby_distance_spinner" 
         style="@style/nearby_spinner_style"
-          android:gravity="center"
-                    android:paddingLeft="30dip"/>
+           android:gravity="center_vertical|center"
+      
+                    />
+      <!--     android:spinnerMode="dropdown"
+           android:dropDownHeight="fill_parent"
+           android:dropDownWidth="wrap_content"
+           -->
 	    <Spinner
 	         android:id="@+id/nearby_class_spinner"
 	         style="@style/nearby_spinner_style"
-	          android:gravity="center"
-                    android:paddingLeft="30dip" />
+	           android:gravity="center_vertical|center"
+                     />
 	    <Spinner
 	         android:id="@+id/nearby_away_spinner"
 	         style="@style/nearby_spinner_style"
-	          android:gravity="center"
-                    android:paddingLeft="30dip" />
+	           android:gravity="center_vertical|center"
+                     />
    
 
 </LinearLayout>

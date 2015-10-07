@@ -24,23 +24,30 @@ public class NetManager {
       public JSONObject sendHttpRequest(String url,List<NameValuePair> params,int requestType)
       {  
     	  url = httpbegin + url;
-    	  Log.v("suzhaohui","sendHttpRequest");
+//    	  Log.v("suzhaohui","sendHttpRequest");
     	  String requestUrl;
     	  if(requestType == 0)
     	  {
     		  Log.v("suzhaohui","revertUrl begin");
     		  requestUrl = revertUrl(url, params, requestType);
-    		  Log.v("suzhaohui","revertUrl end");
+    		  url = requestUrl;
+    		  Log.v("suzhaohui","revertUrl end"+requestUrl);
     	  }
     	  else if(requestType == 1)
     	  {
     		  
     	  }
     	  String jsonData = HttpUtils.getHttpEntity(url, mParams, requestType);
+    	 
     	  JSONObject result = null;
+//    	  Log.v("suzhaohui-log",jsonData);
     	  try {
     		  if(jsonData != null)
-			result = new JSONObject( jsonData);
+    		  {
+    			  
+    			  result = new JSONObject( jsonData);
+    		  }
+			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,7 +55,7 @@ public class NetManager {
     	  return result;
       }
       /**
-       * Æ´½Óget·½Ê½url²ÎÊý
+       * Æ´ï¿½ï¿½getï¿½ï¿½Ê½urlï¿½ï¿½ï¿½ï¿½
        * 
        * @param url
        * @param params
@@ -57,7 +64,7 @@ public class NetManager {
        */
       private String revertUrl(String url, List<NameValuePair> params, int method)
       {
-          if ("".equals(url) || method != HttpUtils.HTTP_GET)
+          if ("".equals(url) || method != HttpUtils.HTTP_GET||params.size()<=0)
           {
               return url;
           }
@@ -81,17 +88,17 @@ public class NetManager {
 
 
 //HttpPost request = new HttpPost(url); 
-////ÏÈ·â×°Ò»¸ö JSON ¶ÔÏó 
+////ï¿½È·ï¿½×°Ò»ï¿½ï¿½ JSON ï¿½ï¿½ï¿½ï¿½ 
 //JSONObject param = new JSONObject(); 
 //param.put("name", "rarnu"); 
 //param.put("password", "123456"); 
-////°ó¶¨µ½ÇëÇó Entry 
+////ï¿½ó¶¨µï¿½ï¿½ï¿½ï¿½ï¿½ Entry 
 //StringEntity se = new StringEntity(param.toString());  
 //request.setEntity(se); 
-////·¢ËÍÇëÇó 
+////ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 //HttpResponse httpResponse = new DefaultHttpClient().execute(request); 
-////µÃµ½Ó¦´ðµÄ×Ö·û´®£¬ÕâÒ²ÊÇÒ»¸ö JSON ¸ñÊ½±£´æµÄÊý¾Ý 
+////ï¿½Ãµï¿½Ó¦ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Ò»ï¿½ï¿½ JSON ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 //String retSrc = EntityUtils.toString(httpResponse.getEntity()); 
-////Éú³É JSON ¶ÔÏó 
+////ï¿½ï¿½ï¿½ï¿½ JSON ï¿½ï¿½ï¿½ï¿½ 
 //JSONObject result = new JSONObject( retSrc); 
 //String token = result.get("token");

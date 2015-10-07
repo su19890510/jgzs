@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    
+    android:background="#000000" >
+
+      <TextView android:id="@+id/project_detail_tittle" 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/top_text_style"
+        android:text="@string/plant_tittle"/>
+
+      <android.support.v4.view.ViewPager
+          android:id="@+id/project_detail_viewpager"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_weight="20"
+          android:background="#000000" >
+      </android.support.v4.view.ViewPager>
+
+   
+
+      </LinearLayout>
+
+<ImageView
+    android:id="@+id/project_detail_show_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:onClick="showDetail"
+       android:scaleType="fitXY"
+    
+    android:src="@drawable/update_feed_bg_1_6" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="vertical"
+    android:id="@+id/project_detail_show_layout" >
+      <ImageView
+    android:id="@+id/projectdetail_show_button"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/update_feed_bg_1_6" 
+    android:layout_marginBottom="0dp"
+   android:scaleType="fitXY"
+   android:onClick="hideDetail"
+    />
+      <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:orientation="vertical"
+              android:layout_weight="8"
+              android:background="#49c4b3"
+     >
+       <ScrollView
+          android:id="@+id/project_detail_dec_scroll"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:layout_marginLeft="0dp"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="0dp"
+          android:background="#49c4b3" >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginBottom="20dp" >
+
+              <TextView
+                  android:id="@+id/project_detail_dec"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="TextView"
+                  android:textColor="#000000" />
+          </LinearLayout>
+          </ScrollView>
+          </LinearLayout>
+</LinearLayout>
+
+  </RelativeLayout>

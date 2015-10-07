@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ta_bg"
+    android:background="@drawable/detail_bg"
     android:orientation="horizontal" >
 
     <!-- 头像 -->
@@ -18,16 +18,18 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="8"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/test2" />
+            android:src="@drawable/test1" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/listItemName"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1.99"
+            android:layout_weight="1.5"
             android:text="我是想不到的植物"
-            android:textAlignment="center"
             android:gravity="center"
             android:textColor="#000000" />
 

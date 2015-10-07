@@ -1,5 +1,8 @@
 package com.su.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PlantListModel {
 		private int id;
 		public int getId() {
@@ -85,6 +88,13 @@ public class PlantListModel {
 		private String cover;
 		private String xixing;
 		private String yongTu;
+		private List<String> imageList;
+		public List<String> getImageList() {
+			return imageList;
+		}
+		public void setImageList(ArrayList<String> imageList) {
+			this.imageList = (List<String>)imageList.clone();
+		}
 
 
 

@@ -3,7 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@android:id/tabhost">
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -24,7 +23,7 @@
              android:layout_height="wrap_content"
              android:orientation="horizontal"
              android:layout_gravity="bottom"
-             android:background="@drawable/tab_bg"
+             android:background="@drawable/bg"
              >
                 <RadioButton
                    android:id="@+id/tab_item_home"
@@ -44,10 +43,7 @@
                    android:id="@+id/tab_item_mine"  
                    style="@style/main_tab_bottom"
                    android:background="@drawable/item_mine_bg"/>                
-                <RadioButton
-                   android:id="@+id/tab_item_more"  
-                   style="@style/main_tab_bottom" 
-                   android:background="@drawable/item_more_bg" />
+               
            </RadioGroup>
          
     </LinearLayout>
