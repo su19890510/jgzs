@@ -1,0 +1,151 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	.classpath
+	bin/classes.dex
+	bin/classes/com/su/ImageLoad/ImageLoader.class
+	bin/classes/com/su/activity/PlantListActivity$2.class
+	bin/classes/com/su/activity/PlantListActivity.class
+	bin/classes/com/su/ui/TabShow.class
+	bin/classes/com/su/util/NetManager.class
+	bin/classes/org/com/cctest/view/XListView.class
+	bin/classes/org/com/cctest/view/XListViewHeader.class
+	bin/jgzs.apk
+	bin/res/crunch/drawable-hdpi/but_catorage_r_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_catorage_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_index_r_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_index_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_mine_r_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_mine_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_near_r_v2.9.png
+	bin/res/crunch/drawable-hdpi/but_near_v2.9.png
+	bin/res/crunch/drawable-hdpi/filter_bg.png
+	bin/res/crunch/drawable-hdpi/sort_bg.9.png
+	bin/res/crunch/drawable-hdpi/top_bg.png
+	bin/resources.ap_
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 4 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   .classpath
+#	modified:   .gitignore
+#	new file:   README.md
+#	deleted:    bin/classes/com/su/ImageLoad/ImageLoader.class
+#	deleted:    bin/classes/com/su/activity/PlantListActivity.class
+#	modified:   bin/classes/com/su/filemanager/FileHelper.class
+#	deleted:    bin/classes/com/su/ui/TabShow.class
+#	deleted:    bin/classes/com/su/util/NetManager.class
+#	deleted:    bin/classes/org/com/cctest/view/XListView.class
+#	deleted:    bin/classes/org/com/cctest/view/XListViewHeader.class
+#	deleted:    bin/jgzs.apk
+#	deleted:    bin/res/crunch/drawable-hdpi/arrow_b.png
+#	deleted:    bin/res/crunch/drawable-hdpi/arrow_ch.png
+#	deleted:    bin/res/crunch/drawable-hdpi/arrow_ch_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/arrow_down.png
+#	deleted:    bin/res/crunch/drawable-hdpi/arrow_up.png
+#	deleted:    bin/res/crunch/drawable-hdpi/attion_add.png
+#	deleted:    bin/res/crunch/drawable-hdpi/bag.png
+#	deleted:    bin/res/crunch/drawable-hdpi/beijingditiao.png
+#	deleted:    bin/res/crunch/drawable-hdpi/bg_city1.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_catorage_r_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_catorage_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_index_r_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_index_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_mine_r_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_mine_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_more_r_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_more_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_near_r_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/but_near_v2.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/button_r.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/detail_bg.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/detail_bg_b.png
+#	deleted:    bin/res/crunch/drawable-hdpi/disdetailmap.png
+#	deleted:    bin/res/crunch/drawable-hdpi/dw.png
+#	deleted:    bin/res/crunch/drawable-hdpi/filter_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/home_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/ic_launcher.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_03.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_05.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_06.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_ch_03.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_ch_05.png
+#	deleted:    bin/res/crunch/drawable-hdpi/index_button_ch_06.png
+#	deleted:    bin/res/crunch/drawable-hdpi/jdt_2.png
+#	deleted:    bin/res/crunch/drawable-hdpi/line_5.png
+#	deleted:    bin/res/crunch/drawable-hdpi/line_d_1.png
+#	deleted:    bin/res/crunch/drawable-hdpi/line_d_2.png
+#	deleted:    bin/res/crunch/drawable-hdpi/listline.png
+#	deleted:    bin/res/crunch/drawable-hdpi/logo_coupon2.png
+#	deleted:    bin/res/crunch/drawable-hdpi/main_arrow_down.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/map_ico.png
+#	deleted:    bin/res/crunch/drawable-hdpi/map_ico_ch.png
+#	deleted:    bin/res/crunch/drawable-hdpi/rel_det_stamp.png
+#	deleted:    bin/res/crunch/drawable-hdpi/search_bg.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/search_ico.png
+#	deleted:    bin/res/crunch/drawable-hdpi/search_ico_ch.png
+#	deleted:    bin/res/crunch/drawable-hdpi/share.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_bg.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_ch_bg.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_lr_new.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img1.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img2.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img3.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img4.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img5.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img6.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img7.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_merchant_img8.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_ms_new.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_shfw_new.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_sq_new.png
+#	deleted:    bin/res/crunch/drawable-hdpi/sort_xxyl_new.png
+#	deleted:    bin/res/crunch/drawable-hdpi/splitline.png
+#	deleted:    bin/res/crunch/drawable-hdpi/ta_bg.9.png
+#	deleted:    bin/res/crunch/drawable-hdpi/tab_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/teach_tow.png
+#	deleted:    bin/res/crunch/drawable-hdpi/top_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/topic.png
+#	deleted:    bin/res/crunch/drawable-hdpi/two_dimensional_code.png
+#	deleted:    bin/res/crunch/drawable-hdpi/two_dimensional_code_bg.png
+#	deleted:    bin/res/crunch/drawable-hdpi/xlistview_arrow.png
+#	deleted:    bin/res/crunch/drawable-ldpi/ic_launcher.png
+#	deleted:    bin/res/crunch/drawable-mdpi/ic_launcher.png
+#	deleted:    bin/res/crunch/drawable/icon.png
+#	deleted:    bin/resources.ap_
+#	new file:   build.gradle
+#	new file:   build.gradle0
+#	new file:   ci.sh
+#	new file:   gradle.properties
+#	new file:   gradle/wrapper/gradle-wrapper.jar
+#	new file:   gradle/wrapper/gradle-wrapper.properties
+#	new file:   gradlew
+#	new file:   gradlew.bat
+#	new file:   libs/android.jar
+#	new file:   libs/jackson-annotations-2.6.0.jar
+#	new file:   libs/jackson-core-2.6.0.jar
+#	new file:   libs/jackson-core-asl-1.9.11.jar
+#	new file:   libs/jackson-databind-2.6.0.jar
+#	new file:   libs/jackson-dataformat-smile-2.6.0.jar
+#	new file:   libs/jackson-datatype-hibernate4-2.6.0.jar
+#	new file:   libs/jackson-mapper-asl-1.9.11.jar
+#	new file:   libs/spring-android-core-1.0.1.RELEASE.jar
+#	new file:   libs/spring-android-rest-template-1.0.1.RELEASE.jar
+#	new file:   pom.xml
+#	new file:   src/gateway/SimpleHttpJsonGatewayTemplate.java
+#	new file:   src/gateway/package-info.java
+#
+
